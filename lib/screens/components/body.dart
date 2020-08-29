@@ -14,19 +14,9 @@
  * limitations under the License.
  */
 
-///
-/// @author nghiatc
-/// @since Aug 29, 2020
-
-import 'dart:async';
-import 'dart:math';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:nclock/constants.dart';
-import 'package:nclock/size_config.dart';
 
 import 'clock.dart';
-import 'clock_painter.dart';
 import 'country_card.dart';
 import 'time_in_hour_and_minute.dart';
 

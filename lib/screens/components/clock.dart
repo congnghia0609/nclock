@@ -14,13 +14,12 @@
  * limitations under the License.
  */
 
-import 'dart:async';
-import 'dart:math';
-
 ///
 /// @author nghiatc
 /// @since Aug 29, 2020
 
+import 'dart:async';
+import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:nclock/models/my_theme_provider.dart';
