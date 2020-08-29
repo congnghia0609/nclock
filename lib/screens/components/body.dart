@@ -21,11 +21,13 @@
 import 'dart:async';
 import 'dart:math';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:nclock/constants.dart';
 import 'package:nclock/size_config.dart';
 
 import 'clock.dart';
 import 'clock_painter.dart';
+import 'country_card.dart';
 import 'time_in_hour_and_minute.dart';
 
 class Body extends StatelessWidget {
@@ -43,13 +45,25 @@ class Body extends StatelessWidget {
             TimeInHourAndMinute(),
             Clock(),
             Spacer(),
-            SizedBox(
-              width: getProportionateScreenWidth(233),
-              child: AspectRatio(
-                aspectRatio: 1.32,
-                child: Container(
-                  color: Colors.blue,
-                ),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  CountryCard(
+                    country: "New York, USA",
+                    timeZone: "+3 HRS | EST",
+                    iconSrc: "assets/icons/Liberty.svg",
+                    time: "9:20",
+                    period: "PM",
+                  ),
+                  CountryCard(
+                    country: "Sydney, AU",
+                    timeZone: "+19 HRS | AEST",
+                    iconSrc: "assets/icons/Sydney.svg",
+                    time: "1:20",
+                    period: "AM",
+                  ),
+                ],
               ),
             ),
           ],
@@ -58,5 +72,4 @@ class Body extends StatelessWidget {
     );
   }
 }
-
 
